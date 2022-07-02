@@ -5,7 +5,7 @@
 #include<QMessageBox>
 #include<QDebug>
 
-class LoginDialog:public QDialog,public Ui::LoginDialog
+class LoginDialog:public QDialog,public Ui::Dialog
 {
     Q_OBJECT
 public:

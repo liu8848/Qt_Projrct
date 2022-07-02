@@ -1,7 +1,7 @@
 #include"LoginDialog.h"
 
 LoginDialog::LoginDialog(){
-    setupUi(this)
+    setupUi(this);
     connect(m_btnBox,&QDialogButtonBox::accepted,this,&LoginDialog::onAccepted);
     connect(m_btnBox,&QDialogButtonBox::rejected,this,&LoginDialog::onRejected);
 }
@@ -18,7 +18,7 @@ void LoginDialog::onAccepted(){
 }
 
 void LoginDialog::onRejected(){
-    QMessageBox msgBox(QMessageBox::Question,"登录","是否确定取消登录",QMessageBox::Yes||QMessageBox::No,this);
+    QMessageBox msgBox(QMessageBox::Question,"登录","是否确定取消登录",QMessageBox::Yes|QMessageBox::No,this);
     if(msgBox.exec()==QMessageBox::Yes){
         close();
     }
